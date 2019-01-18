@@ -112,7 +112,7 @@
         console.log(firebase.database().ref('addresses-list/'))
         firebase.database().ref('addresses-list/').push({
             address
-        })
+        }, () => window.open("https://jerseyground.typeform.com/to/AmrxvK", "_self"))
     }
 
     document.addEventListener('click', function (e) {
@@ -121,7 +121,6 @@
             let text = event.target.parentElement.children[0]
             writeUserData(text.value)
             text.value = ""
-            window.open("https://benjaminshelley.typeform.com/to/AmrxvK")
         }
     })
 })
