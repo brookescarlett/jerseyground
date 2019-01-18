@@ -35,13 +35,6 @@
     sceneTwo.on("enter", () => enterMaxims())
     sceneTwo.addTo(enterController)
 
-
-    // var sceneThree = new ScrollMagic.Scene({
-    //     triggerElement: '#three',
-    // })
-    // sceneThree.on("progress", () => enterPlayer())
-    // sceneThree.addTo(enterController)
-
     var sceneFour = new ScrollMagic.Scene({
         triggerElement: '#three',
     })
