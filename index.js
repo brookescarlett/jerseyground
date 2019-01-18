@@ -109,17 +109,19 @@
     }
 
     function writeUserData(address) {
+        console.log(firebase.database().ref('addresses-list/'))
         firebase.database().ref('addresses-list/').push({
             address
-        });
+        })
     }
 
     document.addEventListener('click', function (e) {
-        if (event.target.id === "submit") {
+        e.preventDefault()
+        if (event.target.id === "send-address") {
             let text = event.target.parentElement.children[0]
             writeUserData(text.value)
             text.value = ""
-            window.open("https://benjaminshelley.typeform.com/to/AmrxvK", "_blank")
+            window.open("https://benjaminshelley.typeform.com/to/AmrxvK")
         }
     })
 })
